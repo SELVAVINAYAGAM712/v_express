@@ -6,11 +6,13 @@ import 'package:v_express/app_comman/screens/splash_screen.dart';
 import 'package:v_express/home/screens/home_screen.dart';
 import 'package:v_express/login/binding/login_binding.dart';
 import 'package:v_express/login/screens/login_screen.dart';
+import 'package:v_express/login/screens/welcome_screen.dart';
 
 class AppRoutes {
   static String splashscreen = '/splashscreen';
   static String loginscreen = '/loginscreen';
-  static String homeScreen = '/HomeScreen';
+  static String homeScreen = '/homeScreen';
+  static String welcomeScreen = '/WelcomeScreen';
 
   static List<GetPage> pages = [
     GetPage(
@@ -32,5 +34,14 @@ class AppRoutes {
       page: () => HomeScreen(),
       bindings: const [],
     ),
+
+     GetPage(
+      name: welcomeScreen,
+      page: () => WelcomeScreen(),
+      bindings: const [],
+    ),
+
+    
+
   ];
 }
